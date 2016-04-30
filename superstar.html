@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<!--page title-->
+    <title>Design Superstar</title>
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Custom Font to get the social media icons (Facebook, Twitter, etc.)-->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+</head>
+
+
+<body id="page-top" class="index">
+
+
+    <!-- Navigation -->
+    <nav>
+        <a id="brand" href="#page-top"><h1>Design Superstar</h1></a>
+        <ul id="navbar">
+            <li>
+                <a href="#about">About me</a>
+            </li>
+            <li>
+                <a href="#gallery">Gallery</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>      
+    </nav>
+
+
+    <!-- Header -->
+    <header>
+	    <img src="img/success.png" alt="">
+        <div class="intro-text">
+            <span class="name">I am the one and only<br><em>Design Superstar</em></span>
+            <hr class="star-bright">
+            <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+	    <h2>About</h2>
+	    <hr class="star-dark">
+	    <p>This is Design Superstar's website, and it was created so he could display a bunch of wolf and food pictures, because dogs are pretty awesome and who doesn't like food. Right?</p>
+    </section>
+
+
+    <!-- Gallery Grid Section -->
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <hr class="star-bright">               
+        <ul class="grid">            
+            <li><img src="img/gallery/icecream.png" alt=""></li>
+            <li><img src="img/gallery/wolf1.png" alt=""></li>
+            <li><img src="img/gallery/cookies.png" alt=""></li>
+            <li><img src="img/gallery/pasta.png" alt=""></li>
+            <li><img src="img/gallery/wolf2.png" alt=""></li>
+            <li><img src="img/gallery/fruits.png" alt=""></li>
+        </ul>
+        
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">        
+        <h2>Contact Me</h2>
+        <hr class="star-dark">
+        <form id="contactForm" novalidate>
+                <div class="form-item">
+                    <label for=“name”>Name</label>
+                    <input type="text" placeholder="Name" id="name" required>
+                </div>
+                <div class="form-item">
+                    <label for=“email”>Email Address</label>
+                    <input type="email" placeholder="Email Address" id="email" required>
+                </div>
+                <div class="form-item">
+                    <label for=“phone”>Phone Number</label>
+                    <input type="tel" placeholder="Phone Number" id="phone" required>
+                </div>
+                <div class="form-item">
+                    <label for=“message”>Message</label>
+                    <textarea rows="5" placeholder="Message" id="message" required></textarea>
+                </div>
+            <br>
+	        <button type="submit">Send</button>
+        </form>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div id="footer-above">
+            <div>
+                <h3>Location</h3>
+                <p>301 Front St. W<br>Toronto, ON • M5V 2T6<br>Canada</p>
+            </div>
+            <div>
+                <h3>Around the Web</h3>
+                <ul>
+                    <li><a href="#" class="button social"><i class="fa fa-fw fa-facebook"></i></a></li>
+                    <li><a href="#" class="button social"><i class="fa fa-fw fa-twitter"></i></a></li>
+                    <li><a href="#" class="button social"><i class="fa fa-fw fa-linkedin"></i></a></li>
+                    <li><a href="#" class="button social"><i class="fa fa-fw fa-dribbble"></i></a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>About Web Rockstar</h3>
+                <p>Made with heaps of &hearts;<br>by <a href="http://qlip.in">John and Jane Doe</a>.</p>
+            </div>  
+        </div>
+        <div id="footer-below">
+            Copyright &copy; Design Superstar 2016
+        </div>
+    </footer>
+
+
+    <!-- Scroll to Top Button (Only supposed to be visible on small and small screen sizes) -->
+    <div class="scroll-top">
+        <a class="button" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+	// Floating label headings for the contact form
+		$(function() {
+		$("body")
+			.on("input propertychange", ".form-item",function(e) {
+        	    $(this).toggleClass("form-item-filled",!! $(e.target).val());})
+        	.on("focus", ".form-item",function() {
+				$(this).addClass("form-item-focused");})
+			.on("blur", ".form-item",function() {
+				$(this).removeClass("form-item-focused");});
+		});
+	// Highlight the top nav as scrolling occurs
+		$('body').scrollspy({
+		    target: '.navbar-fixed-top'
+		})
+	// Closes the Responsive Menu on Menu Item Click
+		$('.navbar-collapse ul li a').click(function() {
+		    $('.navbar-toggle:visible').click();
+		});
+	</script>
+
+</body>
+
+</html>
